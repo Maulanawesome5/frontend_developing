@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Perbandingan</title>
+</head>
+<body>
+    <script>
+        /*
+         * Operator Logika
+         * && AND
+         * || OR
+         * !  NOT
+        */
+
+        let a = true;
+        let b = false;
+        let hasil;
+
+        // Operator &&
+        hasil = a && a;
+        document.writeln(a + " && " + a + " = " + hasil + "<br>");
+        hasil = a && b;
+        document.writeln(a + " && " + b + " = " + hasil + "<br>");
+        hasil = b && a;
+        document.writeln(b + " && " + a + " = " + hasil + "<br>");
+        hasil = b && b;
+        document.writeln(b + " && " + b + " = " + hasil + "<br>");
+
+        document.writeln("<br><br><br>");
+
+        // Operator ||
+        hasil = a || a;
+        document.writeln(a + " || " + a + " = " + hasil + "<br>");
+        hasil = a || b;
+        document.writeln(a + " || " + b + " = " + hasil + "<br>");
+        hasil = b || a;
+        document.writeln(b + " || " + a + " = " + hasil + "<br>");
+        hasil = b || b;
+        document.writeln(b + " || " + b + " = " + hasil + "<br>");
+        
+        document.writeln("<br><br><br>");
+
+        // Operator !
+        document.writeln("Not " + a + " = " + (!a) + "<br>");
+        document.writeln("Not " + b + " = " + (!b) + "<br>");
+
+        document.writeln("<br><br><br>");
+        
+        // Contoh penggunaan operator logika
+        const nilaiUjian = 90;
+        const nilaiAbsensi = 70;
+        document.writeln("Nilai Ujian " + nilaiUjian + "<br>");
+        document.writeln("Nilai Absensi " + nilaiAbsensi + "<br>");
+        
+        const lulusUjian = nilaiUjian > 75;
+        const lulusAbsensi = nilaiAbsensi > 75;
+        
+        const lulus = lulusUjian && lulusAbsensi;
+        document.writeln("Apakah Lulus ? " + lulus + "<br>");
+        const luluss = lulusUjian || lulusAbsensi;
+        document.writeln("Apakah Lulus ? " + luluss + "<br>");
+
+    </script>
+</body>
+</html>
