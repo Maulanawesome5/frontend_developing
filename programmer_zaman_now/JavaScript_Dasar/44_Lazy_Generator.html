@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy Generator | JavaScript</title>
+</head>
+<body>
+    <script>
+        /**
+         * Lazy Generator
+         * Apakah apa
+         * Anukah anu
+        */
+
+        function* Odd_Number(val){
+            for (let i = 1; i <= val; i++) {
+                if (i % 2 === 1) {
+                    console.info(`Loop -> ${i}`);
+                    yield i;
+                }
+            }
+        }
+        
+        const bilangan_ganjil = Odd_Number(100);
+        console.info(bilangan_ganjil.next().value);
+        console.info(bilangan_ganjil.next().value);
+        console.info(bilangan_ganjil.next().value);
+
+    </script>
+</body>
+</html>
+<!-- Tutorial sampai 06:28:20 -->

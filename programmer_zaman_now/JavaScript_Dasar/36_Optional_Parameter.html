@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optional Parameter | JavaScript</title>
+</head>
+<body>
+    <script>
+        /**
+         * Secara default, parameter di function itu bersifat optional.
+         * Artinya kita tidak wajib mengisi nilainya ketika memanggil function.
+         * Jika tidak ada value/nilai yang dikirim ke dalam parameter, maka secara otomatis parameter tersebut bernilai undefined.
+        */
+
+        function SayHello(firstName, midName, lastName) {
+            console.info(firstName);
+            console.info(midName);
+            console.info(lastName);
+        }
+
+        SayHello();
+        SayHello("Eko");
+        SayHello("Eko", "Kurniawan");
+        SayHello("Eko", "Kurniawan", "Khannedy");
+
+    </script>
+</body>
+</html>

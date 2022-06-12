@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Recursive | JavaScript</title>
+</head>
+<body>
+    <script>
+        /**
+         * Fungsi Rekursif
+         * Recursive Function adalah kemampuan dari suatu fungsi untuk memanggil dirinya sendiri.
+         * Terkadang memang ada banyak problem, yang lebih mudah diselesaikan menggunakan rekursi seperti misalkan faktorial.
+        */
+
+        // menggunakan konsep iterasi biasa
+        function iter_factorial(nilai) {
+            let result = 1;
+            for (let i = 1; i <= nilai; i++) {
+                result *= i;
+            }
+            return result;
+        }
+        
+        document.writeln(`<br>Faktorial 5 = ${iter_factorial(5)}`);
+        
+        // menggunakan konsep rekursif
+        function recursive_factorial(nilai) {
+            if (nilai === 1) return 1;
+            else return nilai * recursive_factorial(nilai - 1);
+            /**
+             > Konsep kerja rekursif untuk faktorial
+             > 5 * recursive_factorial(4)
+             > 5 * 4 * recursive_factorial(3)
+             > 5 * 4 * 3 * recursive_factorial(2)
+             > 5 * 4 * 3 * 2 * recursive_factorial(1)
+             > 5 * 4 * 3 * 2 * 1
+            */
+        }
+
+        document.writeln(`<br>Rekursi Faktorial 5 = ${recursive_factorial(5)}`);
+
+    </script>
+</body>
+</html>

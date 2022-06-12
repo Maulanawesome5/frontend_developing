@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function with Return | JavaScript</title>
+</head>
+<body>
+    <script>
+        /**
+         * Secara default, function itu tidak menghasilkan value apapun, namun jika kita ingin, 
+         * kita bisa membuat suatu function yang mengembalikan value.
+         * Agar function bisa menghasilkan value, kita bisa menggunakan kata kunci 'return' di dalam blok function-nya.
+         * Dan di dalam blok function, untuk menghasilkan nilai tersebut, 
+         * kita harus menggunakan kata kunci return, lalu diikuti dengan data yang ingin kita hasilkan.
+         * Function hanya bisa mengembalikan satu data, jika kita ingin mengembalikan beberapa data sekaligus, kita bisa menggunakan array sebagai return value-nya.
+        */
+
+        // Menggunakan dua parameter dan return value
+        function SayHello(firstName, lastName){
+            // Say adalah local scope variabel milik function SayHello
+            const Say = `Hello ${firstName} ${lastName}`;
+            return Say;
+        }
+
+        // Memanggil function yang telah dibuat
+        let Hasil = SayHello("Eko", "Khannedy");
+        document.writeln(`<p>${Hasil}</p>`);
+
+        // Function satu parameter dan banyak return
+        function NilaiSiswa(nilai){
+            if (nilai > 90) return "A";
+            else if (nilai >= 80) return "B";
+            else if (nilai >= 60) return "C";
+            else if (nilai >= 50) return "D";
+            else return "E";
+            
+        }
+
+        Hasil = NilaiSiswa(79);
+        document.writeln(`<p>Nilai anda adalah ${Hasil}</p>`);
+
+        // Menghentikan eksekusi dengan return
+        function isContains(array, searchValue) {
+            for (const elements of array) {
+                document.writeln(`<br>Iterasi element ${elements}`);
+                if (elements === searchValue) {
+                    return true;
+                }
+            }
+            return false;
+        }
+        const MyArray = [1, 2, 3, 4, 5, 10, 15, 20, 25, 30, 35, 40, 42, 43, 50, 75, 100];
+        const CariNilai = 42;
+        const NilaiKetemu = isContains(MyArray, CariNilai);
+        document.writeln(`<p>Nilai ketemu = ${NilaiKetemu}</p>`);
+
+    </script>
+</body>
+</html>

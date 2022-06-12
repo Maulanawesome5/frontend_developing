@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nesting Function | JavaScript</title>
+</head>
+<body>
+    <script>
+        /**
+         * Function dalam Function == Nesting Function
+         * Tidak ada batasan dimana kita bisa membuat function
+         * Termasuk jika kita ingin membuat function di dalam function lainnya, itu bisa dilakukan.
+         * Function yang terdapat di dalam, disebut sebagai inner function.
+         * Inner function hanya bisa diakses di tempat kita membuat function-nya, tidak bisa diakses dari luar function.
+        */
+
+        function Pertama(){
+            // inner function
+            function Kedua(){
+                document.writeln(`<h2>Disini Inner Function</h2>`);
+            }
+            document.writeln(`<h1>Disini Outer Function</h1>`);
+
+            Kedua();
+            Kedua();
+        }
+        Pertama();
+
+    </script>
+</body>
+</html>

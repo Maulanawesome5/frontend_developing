@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope Variable | JavaScript</title>
+</head>
+<body>
+    <script>
+        /**
+         * Scope
+         * Merupakan area akses suatu data.
+         * Ada dua jenis scope, global scope dan local scope.
+         * Setiap kita membuat function, maka kita akan membuat local scope untuk function tersebut.
+         * Data di global scope bisa diakses dari local scope, namun data di local scope hanya bisa di akses di local scope tersebut
+         * atau di scope local di bawahnya (dalam kasus function dalam function).
+        */
+
+        let Counter = 0; // variabel berada di global scope
+
+        // Function ini berada di global scope
+        function HitMe() {
+            // Local scope dari function HitMe
+            while (Counter <= 10) {
+                //
+                document.writeln(`<p>Ini local scope HitMe. Counter = ${Counter}</p>`);
+                Counter++; // akses dari global ke dalam local HitMe
+            }
+        }
+
+        function HitYou() {
+            // Local scope dari function HitYou
+            Counter = 10;
+            while (Counter >= 1) {
+                document.writeln(`<br>Ini local scope HitYou. Counter = ${Counter}`);
+                Counter--;
+            }
+
+            document.writeln(`<br>`);
+
+            // Nest function
+            let Angka = 10;
+            function Pow_HitYou() {
+                for (let iter = 1; iter <= Angka; iter++) {
+                    document.writeln(`<br>Ini local scope Pow_HitYou didalam HitYou. Counter = ${iter**2}`);
+                }
+            }
+            Pow_HitYou(); // hanya bisa dipanggil didalam HitYou
+        }
+
+        HitMe();
+        HitYou();
+
+    </script>
+</body>
+</html>

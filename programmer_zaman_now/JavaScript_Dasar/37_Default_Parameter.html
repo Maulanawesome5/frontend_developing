@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Default Parameter | JavaScript</title>
+</head>
+<body>
+    <script>
+        /**
+         * Default Parameter
+         * Parameter di dalam suatu function juga bisa diberikan nilai default
+         * artinya ketika kita tidak mengirim data ke parameter / memberi nilai undefined,
+         * maka akan digantikan oleh default parameter value yang sudah ditentukan sebelumnya.
+        */
+
+        function RegisterUser(name, gender = "Unknown") {
+            console.info(name);
+            console.info(gender);
+        }
+
+        RegisterUser();
+        RegisterUser("Eko");
+        RegisterUser("Eko", "Male");
+        RegisterUser("Eko", undefined);
+        RegisterUser("Eko", null);
+
+    </script>
+</body>
+</html>

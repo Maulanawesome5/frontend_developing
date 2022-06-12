@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous Function | JavaScript</title>
+</head>
+<body>
+    <script>
+        /**
+         * Sebelumnya kita selalu membuat function dengan nama
+         * Kita juga bisa membuat function tanpa diberi nama, atau istilahnya adalah anonymous function
+         * Kita bisa buat anonymous function dalam suatu variabel atau bisa juga kita buat ketika mengisi parameter.
+         * 
+         * Untuk membuat anonymous function ada 2 cara:
+         * Memasukkan ke dalam variabel.
+         * Memasukkan ke dalam parameter function.
+        */
+
+        // Anonymous in variable
+        let Say = function (namaa){
+            document.writeln(`<br>Hai ${namaa}, ini adalah Anonymous Function`);
+        }
+        
+        Say("Aji");
+
+        // Function as parameter
+        function BerikanNama(callback) {
+            callback("Eko");
+        }
+        
+        BerikanNama(Say); // Say("Aji") akan di replace dengan callback("Eko")
+
+        // Anonymous function as parameter
+        BerikanNama(
+            function(inputNama){
+                document.writeln(`<h1>Alohaaa ${inputNama} my friends..!!</h1>`);
+            }
+        );
+
+    </script>
+</body>
+</html>

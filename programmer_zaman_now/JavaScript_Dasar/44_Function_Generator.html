@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Generator | JavaScript</title>
+</head>
+<body>
+    <script>
+        /**
+         * Function Generator
+         * Fungsi yang digunakan untuk membuat data generator.
+         * Generator adalah data yang bisa di iterasi seperti array.
+         * Untuk membuat function generator, kita perlu menggunakan tanda * setelah kata function.
+         * Dan untuk mengembalikan data di tiap iterasi, bisa gunakan kata kunci yield diikuti datanya.
+        */
+
+        function* createName(){
+            yield "Eko";
+            yield "Kurniawan";
+            yield "Khannedy";
+        }
+
+        const Name = createName();
+
+        // cara akses dengan looping
+        for (const name of Name) {
+            console.info(name);
+        }
+
+        // Fungsi bilangan ganjil
+        function* oddNumber(number){
+            for (let i = 1; i <= number; i++){
+                if (i % 2 === 1) {
+                    console.info(`Yield ${i}`);
+                    yield i;
+                }
+            }
+        }
+
+        const Numbers = oddNumber(100);
+        for (const number of Numbers) {
+            console.info(`Odd Number = ${number}`);
+        }
+        
+        function* oddNumberArray(number){
+            const result = [];
+            for (let i = 1; i <= number; i++){
+                if (i % 2 === 1) {
+                    console.info(`Yield ${i}`);
+                    result.push(i);
+                }
+            }
+            return result;
+        }
+
+        let Numberr = oddNumberArray(100);
+        for (const number of Numberr) {
+            console.info(`Odd Number = ${number}`);
+        }
+
+    </script>
+</body>
+</html>
