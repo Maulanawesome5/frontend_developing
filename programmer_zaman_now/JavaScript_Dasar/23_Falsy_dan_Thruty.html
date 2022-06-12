@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falsy dan Thruty | JavaScript</title>
+</head>
+<body>
+    <script>
+        /**
+         * Falsy dan Thruty
+         * Falsy atau falsey, adalah value yang ketika dalam konteks boolean dia dianggap false.
+         * Ini adalah salah satu fitur unik dari JavaScript yang berguna, dan terkadang membingungkan.
+         * 
+         * Data Falsy
+         * false      -----> Boolean false
+         * 0, -0      -----> Number 0 dan -0 dianggap false
+         * "", '', `` -----> Semua string kosong dianggap false
+         * null       -----> null dianggap false
+         * undefined  -----> dianggap false
+         * NaN        -----> dianggap false
+         * 
+         * Thruty
+         * Kebalikan dari falsy, dimana datanya dianggap bernilai true
+        */
+
+        let data1 = "";
+        let data2 = "false";
+        let angka1 = 0;
+        let angka2 = -1;
+
+        // cek thruty atau falsey
+        if(data1) document.writeln("Data 1 TRUE");
+        else if(data2) document.writeln("Data 2 TRUE");
+        else document.writeln("Data 1 & Data 2 FALSE");
+
+        document.writeln(`<br>`);
+
+        // cek thruty atau falsey
+        if(angka1) document.writeln("Angka 1 TRUE");
+        else if(angka2) document.writeln("Angka 2 TRUE");
+        else document.writeln("Angka 1 & Angka 2 FALSE");
+
+    </script>
+</body>
+</html>

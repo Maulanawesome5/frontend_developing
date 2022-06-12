@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Logika Non Boolean</title>
+</head>
+<body>
+    <script>
+        /**
+         * Operator Logika untuk tipe data Non Boolean
+         * Operator OR (||)
+         * Membaca dari kiri ke kanan.
+         * Mengambil nilai pertama yang thruty. Jika tidak ada satupun yang bernilai thruty, maka yang terakhir akan diambil.
+         * 
+         * Operator AND (&&)
+         * Membaca dari kiri ke kanan.
+         * Mengambil nilai pertama yang falsy.
+         * Jika tidak ada satupun yang bernilai falsy, maka yang terakhir yang akan diambil.
+        */
+
+        // Operator OR
+        console.info("hello" || '');
+        console.info("" || []);
+        console.info("0" || "NOL");
+        console.info(0 || "NOL");
+        console.info(null || "null");
+        console.info(undefined || "undefined");
+
+        // Contoh implementasi
+        const person = {
+            firtsName : "Eko",
+            lastName : "Khannedy",
+            address : "",
+            umur : null
+        };
+
+        let akses;
+
+        akses = person.firtsName || person.lastName;
+        console.info(akses); // Eko
+
+        akses = person.address || person.umur
+        console.info(akses); // null
+
+        // Operator AND
+        console.info("hello" && ''); // ''
+        console.info("" && []); // ""
+        console.info("0" && "NOL"); // NOL
+        console.info(0 && "NOL"); // 0
+        console.info(null && "null");
+        console.info(undefined && "undefined");
+
+    </script>
+</body>
+</html>
