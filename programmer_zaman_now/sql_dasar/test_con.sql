@@ -1,0 +1,5 @@
+SHOW DATABASES;
+USE belajar_mysql;
+SHOW TABLES;
+SELECT * FROM admin;
+
