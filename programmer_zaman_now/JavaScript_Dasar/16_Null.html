@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Null di JavaScript</title>
+</head>
+<body>
+    <script>
+        /**
+         * Null merupakan representasi data kosong
+         * Null berbeda dengan undefined, null berarti variable sudah ditambahkan
+         * nilainya, hanya saja nilainya memang null
+         * Sedangkan undefined adalah variable yang belum ditambahkan nilai apapun.
+        */
+
+        let firstName = null;
+
+        if(firstName === undefined) console.info("First Name are Undefined")
+        else if(firstName === null) console.info("First Name are null")
+        else console.info("First Name = ", firstName)
+
+    </script>
+</body>
+</html>
