@@ -1,4 +1,5 @@
 {
+    "editor.minimap.enabled": false,
     "workbench.colorTheme": "Noctis Minimus",
     "workbench.iconTheme": "vscode-icons",
     "sqltools.connections": [
