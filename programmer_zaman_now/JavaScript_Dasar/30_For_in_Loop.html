@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For In Loop | JavaScript</title>
+</head>
+<body>
+    <script>
+        /**
+         * For in
+         * merupakan perulangan yang digunakan untuk mengiterasi seluruh data property
+         * di object atau index di array.
+         * Walaupun for in bisa digunakan untuk array, namun tidak direkomendasikan untuk array.
+         * Karena biasanya kita jarang sekali butuh data index untuk array.
+        */
+
+       const Person = {
+           firstName : "Eko",
+           midName : "Kurniawan",
+           lastName : "Khannedy"
+        }
+
+        const Nama = ["Eko", "Kurniawan", "Khannedy"];
+        
+        // Bentuk for in
+        for (const properties in Person) {
+            document.writeln(`<p>${properties} : ${Person[properties]}</p>`);
+        }
+
+        for (const indeks in Nama) {
+            document.writeln(`<p>${indeks} : ${Nama[indeks]}</p>`);
+        }
+
+    </script>
+</body>
+</html>
+
+<!-- Tutorial sampai 04:37:54 -->
