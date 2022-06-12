@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variabel JavaScript</title>
+</head>
+<body>
+    <script>
+        /*
+         * Variable
+         * Variable adalah tempat untuk menyimpan data.
+         * Untuk membuat variabel di JavaScript, gunakan kata kunci 'var' diikuti dengan nama variabelnya.
+         * JavaScript bersifat dinamis, artinya variabel di JavaScript tidak terpaku harus menggunakan
+         * satu tipe data, kita bisa mengubah tipenya dalam satu variabel yang sama.
+         * Tidak seperti pemrograman lain yang harus di deklarasi terlebih dahulu misalkan 'int nama_var'
+        */
+
+        var nama;
+        
+        nama = "Maulana"; // bertipe string
+        document.writeln("Nama : " + nama + "<br>");
+        
+        nama = 12345; // diganti tipe number
+        document.writeln("Nama : " + nama + "<br>");
+
+        nama = true; // diganti tipe boolean
+        document.writeln("Nama : " + nama + "<br>" + "<br>");
+
+        /*
+         * Kata kunci 'let' dan 'const'
+         * Sebelum tahun 2015, keyword untuk membuat variabel hanya bisa menggunakan 'var'
+         * Namun tahun 2015 sejak versi ECMAScript 2015, diperkenalkan keyword LET dan CONST untuk membuat variabel
+         * JavaScript sekarang tidak direkomendasikan lagi menggunakan keyword 'var' untuk membuat variabel
+        */
+
+        let nama_saya; // let = var, nilainya bisa diubah
+        const PI = 3.14159265359; // const != let & var, nilainya konstan atau tidak bisa diubah
+
+        nama_saya = "Maulana Aji Wicaksono";
+        // PI = 22.7; // Uncaught TypeError: Assignment to constant variable.
+
+        document.writeln("Nama Saya : " + nama_saya + "<br>");
+        document.writeln("PI = " + PI + "<br>");
+
+    </script>
+</body>
+</html>
