@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Template</title>
+</head>
+<body>
+    <script>
+        /*
+         * String Template
+         * JavaScript memiliki fitur yang bernama String Template, yang berguna
+         * untuk subtitusi data dari luar String, seperti mengambil data variabel atau melakukan operasi matematika
+         * Untuk membuat String template cukup tambahkan simbol Backtick `Contoh_String`
+        */
+        
+        const Nama = "Maulana Aji Wicaksono";
+        const templates = `Nama : ${Nama}`; // Ini bentuk string template
+
+        document.writeln(templates);
+        document.writeln("<br>");
+        
+        /*
+        * Expression pada String Template 
+        * Selain untuk menggantikan concatenation string (+), ternyata String Template
+        * bisa untuk memunculkan hasil dari suatu ekspresi.
+        */
+       
+       const Nilai = 80;
+       const templatess = `${templates}, Lulus : ${Nilai > 70}`; // String template untuk satu ekspresi
+       
+       document.writeln(templatess);
+       document.writeln("<br>");
+
+       /*
+        * Multiline String
+        * String Template juga bisa berfungsi untuk membuat multiline
+       */
+
+       let multilineStr = `
+       Saya Maulana Aji Wicaksono,
+       Sekarang umur 23 tahun. Calon Mahasiswa abadi.
+       Jomblo akut, isi dompet sering kosong
+       `;
+       document.writeln("<pre>");
+        document.writeln(multilineStr);
+       document.writeln("</pre>");
+
+    </script>
+</body>
+</html

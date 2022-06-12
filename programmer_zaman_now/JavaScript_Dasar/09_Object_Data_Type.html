@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Object</title>
+</head>
+<body>
+    <script>
+        /*
+         * Tipe data Object
+         * Merupakan tipe data yang mirip dengan array.
+         * Bedanya adalah index pada tipe data object bisa menggunakan string.
+         * Index di object disebut attributes atau properties, bukan index.
+         * Konsepnya mirip dengan Assosiative Array pada bahasa PHP, dan dictionary pada Python.
+        */
+
+        const person = {}; // Object kosong
+
+        // Menambah atau mengubah isi data
+        person["nama"] = "Eko Kurniawan";
+        person["alamat"] = "Indonesia";
+        person["umur"] = 30;
+
+        console.table(person);
+        document.writeln(`${person}<br>`);
+        document.writeln(`Nama   : ${person.nama}<br>`);
+        document.writeln(`Alamat : ${person.alamat}<br>`);
+        document.writeln(`Umur   : ${person.umur}<br>`);
+        
+        document.writeln("<br><br>");
+        
+        // Object dengan isi
+        const orang = {
+            nama : "Maulana Aji W",
+            alamat : "Indonesia",
+            umur : 23
+        };
+        
+        console.table(orang);
+        document.writeln(`${orang}<br>`);
+        document.writeln(`Nama   : ${orang.nama}<br>`);
+        document.writeln(`Alamat : ${orang.alamat}<br>`);
+        document.writeln(`Umur   : ${orang.umur}<br>`);
+
+    </script>
+</body>
+</html>

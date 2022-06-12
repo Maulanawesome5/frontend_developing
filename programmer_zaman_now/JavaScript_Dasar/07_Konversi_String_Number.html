@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi String dan Number</title>
+</head>
+<body>
+    <script>
+        const Nilai1 = "1";
+        const Nilai2 = 1;
+        let Tambah = Nilai1 + Nilai2; // Jadi 11, karena 1 ditempel 1 disebelahnya
+        
+        document.writeln(`<p>${Tambah}</p>`); // Jadi 11, karena 1 ditempel 1 disebelahnya
+        
+        /*
+         * Konversi String dan Number
+         * parseInt(string)   ---> Mengkonversi dari string ke number bilangan bulat
+         * parseFloat(string) ---> Mengkonversi dari string ke number bilangan desimal
+         * Number(string)     ---> Mengkonversi dari string ke number (integer / float)
+         * number.toString()  ---> Mengkonversi dari number menjadi string
+        */
+        const Nilai3 = parseInt("1");
+        Tambah = Nilai3 + Nilai2;
+        document.writeln(`<p>${Tambah}</p>`); // Jadi 2
+        
+        document.writeln(`<p>${parseInt("3.14")}</p>`); // Jadi 3
+        document.writeln(`<p>${parseFloat("3.14")}</p>`); // Tetap 3.14 float
+        document.writeln(`<p>${Number("22.7")}</p>`); // Tetap 22.7 float
+        
+        let a = 255;
+        document.writeln(`${a.toString()} \n`);
+
+        /*
+         * NaN (Not a Number)
+         * Merupakan hasil konversi yang dikembalikan jika ternyata
+         * string tidak dapat dikonversi menjadi angka.
+         * Contoh string "hello-world" tidak dapat di konversi menjadi angka.
+        */
+
+        document.writeln(`<p> ${parseInt("hello-world")} </p>`); // NaN
+        document.writeln(`<p> ${parseInt("123")} </p>`); // 123
+        document.writeln(`<p> ${parseInt("123maulana")} </p>`); // 123, karena method parseInt akan memeriksa isi string dari depan ke belakang
+        document.writeln(`<p> ${parseInt("maulana123")} </p>`); // NaN
+        
+        document.writeln(`<p> ${Number("123456")} </p>`); // 123456
+        document.writeln(`<p> ${Number("123maulana")} </p>`); // NaN
+        
+        /*
+         * Method isNaN()
+         * Untuk memeriksa apakah didalam suatu data terdapat nilai NaN
+        */
+
+        document.writeln(`<p>${isNaN(Nilai1)}</p>`); // false
+        document.writeln(`<p>${isNaN("1")}</p>`); // false, akan otomatis dikenali sebagai number
+        document.writeln(`<p>${isNaN("abcd")}</p>`); // true, karena bukan number
+
+    </script>
+</body>
+</html>

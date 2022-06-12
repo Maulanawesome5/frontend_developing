@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe data Array</title>
+</head>
+<body>
+    <script>
+        
+        let arrayKosong = [];
+        let arrayStr = ["Aji", "Maulana", "Wicaksono"];
+        let arrayNesting = [1, 2, 3, 4, 5];
+
+        /* Menambah data ke dalam array */
+        arrayKosong.push("Bima");
+        arrayKosong.push("Pandu", "Wijaya");
+        arrayKosong.push(23, 3.14, 22.7, true); /* Array JS bisa menampung campuran tipe data */
+
+        console.table(arrayKosong);
+        document.writeln(arrayKosong);
+        document.writeln(`<p>Panjang Array : ${arrayKosong.length}</p>`);
+
+        /*
+         * Operasi pada Array JavaScript
+         * array.push()   ---> Menambah data kedalam array
+         * array.length() ---> Mengukur berapa panjang dari suatu array
+         * array[index]   ---> Akses data di array berdasarkan index
+         * array[index] = value
+         * delete array[index] ---> Menghapus data di array berdasarkan index
+        */
+
+        // console.table(arrayStr);
+        arrayStr.push("Bella", "Virgina", "Martha");
+        console.table(arrayStr);
+        
+        arrayStr[0] = "Maulana";
+        arrayStr[1] = "Aji";
+        console.table(arrayStr);
+
+        document.writeln(arrayStr);
+        document.writeln(`<p>Panjang Array : ${arrayStr.length}</p>`);
+        
+        arrayNesting.push(['a', 'b', 'c', true, false]) // Array di dalam array
+        console.table(arrayNesting);
+        document.writeln(arrayNesting);
+        document.writeln(`<p>Panjang Array : ${arrayNesting.length}</p>`);
+
+    </script>
+</body>
+</html>
